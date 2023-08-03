@@ -1,6 +1,9 @@
-import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
+//import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:ecommerce_shopanbd/ui/utills/styles.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/common_elevated_button.dart';
+import '../widgets/common_text_field.dart';
 
 class EmailVerificationScreen extends StatefulWidget {
   const EmailVerificationScreen({Key? key}) : super(key: key);
@@ -28,23 +31,18 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
             Text('Welcome Back', style: titleTextStyle),
             const SizedBox(height: 4),
             Text('Please Enter Your Email Address', style: subTitleStyle),
-            TextFormField(
+            const SizedBox(height: 16),
+            CommonTextField(
               controller: TextEditingController(),
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 4,
-                ),
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(color: primaryColor, width: 2),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: primaryColor, width: 2),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: primaryColor),
-                ),
-              ),
+              hintText: 'Email Address',
+              textInputType: TextInputType.emailAddress,
+              validator: (String? value ) {
+              },
+            ),
+            const SizedBox(height: 16),
+            CommonElevatedButton(
+              title: 'Next',
+              onTap: () {},
             ),
           ],
         ),
@@ -52,3 +50,6 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
     );
   }
 }
+
+
+
