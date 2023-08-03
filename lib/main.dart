@@ -6,6 +6,7 @@
 //this section import all the app that's why we comment ecommerce_shopanbd
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'ui/screens/email_verification_screen.dart';
 import 'ui/screens/splash_screen.dart'; // relative path
 
 void main() {
@@ -18,7 +19,7 @@ class ShopanBD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-      home: SplashScreen(),
+      home: EmailVerificationScreen(),
 
     );
   }
