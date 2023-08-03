@@ -1,9 +1,10 @@
-//import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
+
+import 'package:ecommerce_shopanbd/ui/screens/otp_verification_screen.dart';
 import 'package:ecommerce_shopanbd/ui/utills/styles.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/common_elevated_button.dart';
 import '../widgets/common_text_field.dart';
+import 'package:get/get.dart';
 
 class EmailVerificationScreen extends StatefulWidget {
   const EmailVerificationScreen({Key? key}) : super(key: key);
@@ -42,8 +43,11 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
             const SizedBox(height: 16),
             CommonElevatedButton(
               title: 'Next',
-              onTap: () {},
+              onTap: () {
+                Get.to(OTPVerificationScreen());
+              },
             ),
+
           ],
         ),
       ),

@@ -6,7 +6,7 @@ class CommonElevatedButton extends StatelessWidget {
   }) : super(key: key);
 
   final String title;
-  final VoidCallback onTap;
+  final VoidCallback onTap; //voidcallback is limited edition
 
 
   @override
