@@ -4,7 +4,6 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import '../utills/app_colours.dart';
 import '../utills/styles.dart';
 import '../widgets/common_elevated_button.dart';
-import '../widgets/common_text_field.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
   const OTPVerificationScreen({Key? key}) : super(key: key);
@@ -32,7 +31,6 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             const SizedBox(height: 4),
             Text('A 4 digit OTP has been sent', style: subTitleStyle),
             const SizedBox(height: 16),
-
             PinCodeTextField(
               length: 4,
               obscureText: false,
@@ -51,20 +49,28 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 inactiveFillColor: Colors.white,
               ),
               animationDuration: const Duration(milliseconds: 300),
-             // backgroundColor: Colors.blue.shade50,
+              // backgroundColor: Colors.blue.shade50,
               enableActiveFill: true,
               onCompleted: (v) {
                 print("Completed");
               },
-              onChanged: (value) {
-              }, appContext: context,
+              onChanged: (value) {},
+              appContext: context,
+            ),
+            const SizedBox(height: 16),
+            // CommonElevatedButton(
+            //   title: 'Next',
+            //   onTap: () {},
+            // ),
+
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text('Next'),
+              ),
             ),
 
-            const SizedBox(height: 16),
-            CommonElevatedButton(
-              title: 'Next',
-              onTap: () {},
-            ),
             const SizedBox(height: 16),
             RichText(
               text: TextSpan(
@@ -74,19 +80,26 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 ),
                 text: 'this code will expire in ',
                 children: [
-                  TextSpan(text: '120s',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: primaryColor,
-                  ),),
+                  TextSpan(
+                    text: '120s',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: primaryColor,
+                    ),
+                  ),
                 ],
               ),
             ),
             const SizedBox(height: 16),
-            TextButton(onPressed: (){}, child: Text('Resend Code',
-              style: TextStyle(
-                color: greyColor.withOpacity(0.8),
-              ),),),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                'Resend Code',
+                style: TextStyle(
+                  color: greyColor.withOpacity(0.8),
+                ),
+              ),
+            ),
           ],
         ),
       ),

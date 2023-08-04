@@ -4,6 +4,8 @@
 
 //import 'package:ecommerce_shopanbd/ui/screens/splash_screen.dart';
 //this section import all the app that's why we comment ecommerce_shopanbd
+import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'ui/screens/email_verification_screen.dart';
@@ -18,8 +20,33 @@ class ShopanBD extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      home: EmailVerificationScreen(),
+    return GetMaterialApp(
+      home: const SplashScreen(),
+     // themeMode: ThemeMode.dark,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+
+            textStyle: const TextStyle(
+              fontWeight: FontWeight.w500,
+              letterSpacing: 0.6,
+            )
+        ),
+      ),
+    ),
+
+      theme: ThemeData(
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.w500,
+                letterSpacing: 0.6,
+              )
+          ),
+        ),
+      ),
 
     );
   }
