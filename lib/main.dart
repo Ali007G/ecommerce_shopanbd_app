@@ -21,9 +21,14 @@ class ShopanBD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
      // themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+              elevation: 1,
+        ),
         brightness: Brightness.dark,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
