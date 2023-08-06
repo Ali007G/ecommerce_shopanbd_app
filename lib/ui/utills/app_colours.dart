@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 const Color primaryColor = Color(0xFF07ADAE);
-const Color greyColor = Color(0xFF808E8E);
+const Color greyColor = Color(0xFFAAB5BB);
 const Color blackColor = Color(0xFF000000);
+const Color softGreyColor = Color(0xAAB5BBFF);
 
