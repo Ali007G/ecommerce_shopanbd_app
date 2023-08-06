@@ -8,10 +8,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.white,
         title: Row(
           children: [
-           // Image.asset('assets/images/nap.jpg'),
+            Image.asset('assets/images/logo_nav.png'),
             const Spacer(),
             AppBarIconButton(
               icondata: Icons.person,
@@ -48,7 +49,7 @@ class AppBarIconButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(16),
-      splashColor: primaryColor.withOpacity(0.4),
+      splashColor: primaryColor.withOpacity(0.6),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4),
         child: CircleAvatar(
