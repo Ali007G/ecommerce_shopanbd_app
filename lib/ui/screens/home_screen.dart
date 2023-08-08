@@ -4,10 +4,11 @@
 //import 'package:ecommerce_shopanbd/ui/utills/styles.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
+import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-//import 'package:get/get.dart';
+import 'package:get/get.dart';
 import '../widgets/catrgory_card_widget.dart';
 import '../widgets/home/app_bar_icon_button.dart';
 import '../widgets/home/home_carousal_widget.dart';
@@ -67,7 +68,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               RemarksTitleWidget(
                 remarksName: 'Categories',
-                onTapSeeAll: () {},
+                onTapSeeAll: () {
+                  Get.find<BottomNavigationBarController>().changeIndex(1);
+                },
               ),
               const SizedBox(
                 height: 8,
