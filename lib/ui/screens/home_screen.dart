@@ -3,7 +3,7 @@
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/styles.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
-import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
+//import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

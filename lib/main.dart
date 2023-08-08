@@ -4,6 +4,7 @@
 
 //import 'package:ecommerce_shopanbd/ui/screens/splash_screen.dart';
 //this section import all the app that's why we comment ecommerce_shopanbd
+import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
 import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +22,11 @@ class ShopanBD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: GetXBindings(),
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
      // themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       darkTheme: ThemeData(
         appBarTheme: AppBarTheme(
           color: Colors.white,
@@ -42,9 +45,19 @@ class ShopanBD extends StatelessWidget {
     ),
 
       theme: ThemeData(
+        brightness: Brightness.light,
+        appBarTheme: const AppBarTheme(
+          color: Colors.white,
+          elevation: 1,
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
+        ),
+        scaffoldBackgroundColor: Colors.white,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-
               textStyle: const TextStyle(
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0.6,
@@ -52,7 +65,14 @@ class ShopanBD extends StatelessWidget {
           ),
         ),
       ),
-
     );
   }
+}
+
+class GetXBindings extends Bindings {
+  @override
+  void dependencies() {
+   Get.put(BottomNavigationBarController());
+  }
+
 }

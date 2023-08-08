@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 
 import '../state_management/bottom_navigation_bar_controller.dart';
 
+// statefull to stateless
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({Key? key}) : super(key: key);
 
@@ -16,8 +17,8 @@ class BottomNavBarScreen extends StatefulWidget {
 }
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
-  BottomNavigationBarController _navigationBarController =
-  Get.put(BottomNavigationBarController());
+  // final BottomNavigationBarController _navigationBarController =
+  // Get.put(BottomNavigationBarController());
   final List<Widget> _screens =[ const
     HomeScreen(),
     CategoryScreen(),
@@ -32,6 +33,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     return Scaffold(
       body: GetBuilder<BottomNavigationBarController>(
         builder: (controller) {
+          print(controller.selectedIndex);
           return _screens[controller.selectedIndex];
         }
       ),
