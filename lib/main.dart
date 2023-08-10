@@ -25,7 +25,7 @@ class ShopanBD extends StatelessWidget {
     return GetMaterialApp(
       initialBinding: GetXBindings(),
       debugShowCheckedModeBanner: false,
-      home: const CompleteProfileScreen(),
+      home: const SplashScreen(),
      // themeMode: ThemeMode.dark,
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(

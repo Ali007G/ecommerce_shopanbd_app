@@ -17,7 +17,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
       child: Scaffold(
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start;,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 16,
@@ -88,12 +88,17 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
               const SizedBox(
                 height: 16,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CommonEle(
-                  onPressed: () {},
-                  child: const Text('Complete'),
-
+              SizedBox(
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Complete', style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.6),
+                    ),
+                  ),
                 ),
               ),
             ],
