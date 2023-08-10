@@ -4,6 +4,7 @@
 
 //import 'package:ecommerce_shopanbd/ui/screens/splash_screen.dart';
 //this section import all the app that's why we comment ecommerce_shopanbd
+import 'package:ecommerce_shopanbd/ui/screens/complete_profile.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
 import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,7 +25,7 @@ class ShopanBD extends StatelessWidget {
     return GetMaterialApp(
       initialBinding: GetXBindings(),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const CompleteProfileScreen(),
      // themeMode: ThemeMode.dark,
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(
