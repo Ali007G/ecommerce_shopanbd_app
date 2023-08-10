@@ -90,7 +90,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
+                child: CommonEle(
                   onPressed: () {},
                   child: const Text('Complete'),
 
