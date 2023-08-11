@@ -6,6 +6,7 @@
 //this section import all the app that's why we comment ecommerce_shopanbd
 import 'package:ecommerce_shopanbd/ui/screens/complete_profile.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
+import 'package:ecommerce_shopanbd/ui/state_management/user_auth_controller.dart';
 import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -74,6 +75,7 @@ class GetXBindings extends Bindings {
   @override
   void dependencies() {
    Get.put(BottomNavigationBarController());
+   Get.put(UserAuthController());
   }
 
 }

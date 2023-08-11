@@ -4,6 +4,7 @@
 //import 'package:ecommerce_shopanbd/ui/utills/styles.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
+import 'package:ecommerce_shopanbd/ui/screens/email_verification_screen.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
             const Spacer(),
             AppBarIconButton(
               icondata: Icons.person,
-              onTap: () {},
+              onTap: () {
+                Get.to(const EmailVerificationScreen());
+              },
             ),
             AppBarIconButton(
               icondata: Icons.call,
