@@ -12,8 +12,10 @@ class NetworkCaller {
 
   static Future<ResponseModel> getRequest({required String url}) async {
     try {
-    final Response response = await get(Uri.parse(Urls.baseUrl + url));
-    log(response.body);
+      print(Urls.baseUrl + url);
+      final Response response = await get(Uri.parse(Urls.baseUrl + url));
+      print(response.statusCode);
+    //log(response.body);
       if (response.statusCode == 200) {
         return ResponseModel(
           isSuccess: true,
@@ -28,13 +30,12 @@ class NetworkCaller {
         );
       }
     } catch (e) {
+      print('log print error');
       log(e.toString());
-      // log(e.toString());
       return ResponseModel(
           isSuccess: false,
           statusCode: -1,
-          returnData: e.toString()
-      );
+          returnData: e.toString());
     }
   }
 }

@@ -49,26 +49,30 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                       if(value?.isEmpty ?? true) {
                         return 'Enter a valid email';
                       }
+                      return null;
                     },
                   ),
                   const SizedBox(height: 16),
-                  authController.emailVerificationInProgress
+                authController.emailVerificationInProgress
                     ? const CircularProgressIndicator()
                     : CommonElevatedButton(
                         title: 'Next',
-                        onTap: ()  async {
-                          if(_formkey.currentState!.validate()) {
+                        onTap: () async {
+                          if (_formkey.currentState!.validate()) {
                             final bool response = await authController
                                 .emailVerification(_emailETController.text);
+                            print('ali ali ali ali ali ali ali');
+                            print(response);
                             if (response) {
-                              Get.to(const OTPVerificationScreen());
+                              Get.to(OTPVerificationScreen(
+                                email: _emailETController.text,
+                              ));
                             } else {
                               if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
                                     content: Text(
-                                        'Email verification failed, Try again'
-                                    ),
+                                        'Email verification failed, Try again'),
                                   ),
                                 );
                               }
@@ -77,14 +81,10 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                         },
                       ),
               ],
-              ),
             ),
-          );
-        }
-      ),
+          ),
+        );
+      }),
     );
   }
 }
-
-
-

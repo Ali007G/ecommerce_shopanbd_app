@@ -1,7 +1,7 @@
 class ResponseModel {
   final int statusCode;
   final bool isSuccess;
-  final String returnData;
+  final dynamic returnData;
 
   ResponseModel(
       {required this.isSuccess,

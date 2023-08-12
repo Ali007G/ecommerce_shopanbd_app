@@ -1,16 +1,21 @@
 import 'package:ecommerce_shopanbd/data/services/network_caller.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class UserAuthController extends GetxController {
   bool _emailVerificationInProgress = false;
+  bool _otpVerificationInProgress = false;
 
   bool get emailVerificationInProgress => _emailVerificationInProgress;
+  bool get otpVerificationInProgress => _otpVerificationInProgress;
   
   Future<bool>emailVerification(String email) async {
     _emailVerificationInProgress = true;
     update();
     final response = await NetworkCaller.getRequest(url: '/UserLogin/$email');
+    _emailVerificationInProgress = false;
+    print('sarwar sarwar');
+    print(response.isSuccess);
+
     if(response.isSuccess) {
       update();
       return true;
@@ -19,5 +24,34 @@ class UserAuthController extends GetxController {
       return false;
     }
   }
+
+  Future<bool>otpVerification(String email, String otp) async {
+    _otpVerificationInProgress = true;
+    update();
+    final response =
+        await NetworkCaller.getRequest(url: '/VerifyLogin/$email/$otp');
+    _otpVerificationInProgress = false;
+    if(response.isSuccess) {
+      update();
+      return true;
+    } else {
+      update();
+      return false;
+    }
+  }
+
+  // Future<bool>otpVerification(String email, String otp) async {
+  //   _otpVerificationInProgress = true;
+  //   update();
+  //   final response = await NetworkCaller.getRequest(url: '/VerifyLogin/$email/$otp');
+  //   _otpVerificationInProgress = false;
+  //   if(response.isSuccess) {
+  //     update();
+  //     return true;
+  //   } else {
+  //     update();
+  //     return false;
+  //   }
+  // }
   
 }
