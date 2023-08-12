@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:ecommerce_shopanbd/ui/screens/bottom_nav_bar_screen.dart';
 import 'package:ecommerce_shopanbd/ui/screens/email_verification_screen.dart';
