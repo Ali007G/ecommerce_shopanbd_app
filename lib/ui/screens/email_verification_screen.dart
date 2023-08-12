@@ -61,8 +61,6 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                           if (_formkey.currentState!.validate()) {
                             final bool response = await authController
                                 .emailVerification(_emailETController.text);
-                            print('ali ali ali ali ali ali ali');
-                            print(response);
                             if (response) {
                               Get.to(OTPVerificationScreen(
                                 email: _emailETController.text,

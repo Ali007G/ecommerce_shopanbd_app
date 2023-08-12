@@ -1,4 +1,5 @@
 import 'package:ecommerce_shopanbd/data/services/network_caller.dart';
+import 'package:ecommerce_shopanbd/ui/state_management/auth_controller.dart';
 import 'package:get/get.dart';
 
 class UserAuthController extends GetxController {
@@ -13,8 +14,6 @@ class UserAuthController extends GetxController {
     update();
     final response = await NetworkCaller.getRequest(url: '/UserLogin/$email');
     _emailVerificationInProgress = false;
-    print('sarwar sarwar');
-    print(response.isSuccess);
 
     if(response.isSuccess) {
       update();
@@ -32,6 +31,7 @@ class UserAuthController extends GetxController {
         await NetworkCaller.getRequest(url: '/VerifyLogin/$email/$otp');
     _otpVerificationInProgress = false;
     if(response.isSuccess) {
+     await Get.find<AuthController>().saveToken(response.returnData['data']);
       update();
       return true;
     } else {

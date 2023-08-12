@@ -12,7 +12,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'ui/screens/email_verification_screen.dart';
-import 'ui/screens/splash_screen.dart'; // relative path
+import 'ui/screens/splash_screen.dart';
+import 'ui/state_management/auth_controller.dart'; // relative path
 
 void main() {
   runApp(const ShopanBD());
@@ -76,6 +77,7 @@ class GetXBindings extends Bindings {
   void dependencies() {
    Get.put(BottomNavigationBarController());
    Get.put(UserAuthController());
+   Get.put(AuthController());
   }
 
 }
