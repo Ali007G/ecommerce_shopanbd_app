@@ -5,6 +5,7 @@
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:ecommerce_shopanbd/ui/screens/email_verification_screen.dart';
+import 'package:ecommerce_shopanbd/ui/state_management/auth_controller.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,13 @@ class _HomeScreenState extends State<HomeScreen> {
             AppBarIconButton(
               icondata: Icons.person,
               onTap: () {
-                Get.to(const EmailVerificationScreen());
+                Get.find<AuthController>().isLoggedIn().then((value){
+                  if (!value) {
+                    Get.to(const EmailVerificationScreen());
+                  } else {
+
+                  }
+                });
               },
             ),
             AppBarIconButton(
