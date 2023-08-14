@@ -47,6 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   if (!value) {
                     Get.to(const EmailVerificationScreen());
                   } else {
+                    Get.to(const EmailVerificationScreen());
 
                   }
                 });
