@@ -4,6 +4,7 @@
 //import 'package:ecommerce_shopanbd/ui/utills/styles.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 //import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
+import 'package:ecommerce_shopanbd/ui/screens/complete_profile.dart';
 import 'package:ecommerce_shopanbd/ui/screens/email_verification_screen.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/auth_controller.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
@@ -44,10 +45,10 @@ class _HomeScreenState extends State<HomeScreen> {
               icondata: Icons.person,
               onTap: () {
                 Get.find<AuthController>().isLoggedIn().then((value){
-                  if (!value) {
-                    Get.to(const EmailVerificationScreen());
+                  if (value) {
+                    Get.to(const CompleteProfileScreen());
                   } else {
-
+                    Get.to(const EmailVerificationScreen());
                   }
                 });
               },

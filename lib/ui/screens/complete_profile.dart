@@ -101,9 +101,6 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 16,
-              ),
             ],
           ),
         ),
