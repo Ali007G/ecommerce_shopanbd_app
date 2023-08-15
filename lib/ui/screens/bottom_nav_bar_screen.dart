@@ -2,6 +2,7 @@ import 'package:ecommerce_shopanbd/ui/screens/cart_screen.dart';
 import 'package:ecommerce_shopanbd/ui/screens/category_screen.dart';
 import 'package:ecommerce_shopanbd/ui/screens/home_screen.dart';
 import 'package:ecommerce_shopanbd/ui/screens/wish_list_screen.dart';
+import 'package:ecommerce_shopanbd/ui/state_management/home_controller.dart';
 import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,6 +26,12 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     CartScreen(),
     WishListScreen(),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    Get.find<HomeController>().getHomeSlider();
+  }
 
   //int _selectedIndex = 0;
 

@@ -1,12 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import '../../../data/models/home_slider_model.dart';
 import '../../utills/app_colours.dart';
 
 class HomeCarousalWidget extends StatelessWidget {
+  final HomeSliderModel homeSliderModel;
   final ValueNotifier<int> _currentCarouselIndex = ValueNotifier(0);
 
-  HomeCarousalWidget({Key? key}) : super(key: key);
+  HomeCarousalWidget({Key? key, required this.homeSliderModel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class HomeCarousalWidget extends StatelessWidget {
             },
             autoPlayInterval: const Duration(seconds: 5),
           ),
-          items: [1, 2, 3, 4, 5].map((i) {
+          items: homeSliderModel.sliders!.map((i) {
             return Builder(
               builder: (BuildContext context) {
                 return Container(

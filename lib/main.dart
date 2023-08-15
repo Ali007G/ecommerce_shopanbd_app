@@ -5,6 +5,7 @@
 //import 'package:ecommerce_shopanbd/ui/screens/splash_screen.dart';
 //this section import all the app that's why we comment ecommerce_shopanbd
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
+import 'package:ecommerce_shopanbd/ui/state_management/home_controller.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/user_auth_controller.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/user_profile_controller.dart';
 import 'package:flutter/cupertino.dart';
@@ -77,6 +78,7 @@ class GetXBindings extends Bindings {
    Get.put(UserAuthController());
    Get.put(AuthController());
    Get.put(UserProfileController());
+   Get.put(HomeController());
   }
 
 }

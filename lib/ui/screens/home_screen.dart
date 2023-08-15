@@ -8,6 +8,7 @@ import 'package:ecommerce_shopanbd/ui/screens/complete_profile.dart';
 import 'package:ecommerce_shopanbd/ui/screens/email_verification_screen.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/auth_controller.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
+import 'package:ecommerce_shopanbd/ui/state_management/home_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -73,9 +74,23 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 16,
               ),
-              HomeCarousalWidget(),
+              GetBuilder<HomeController>(
+                builder: (homeController) {
+                if (homeController.getSliderInProgress) {
+                  return const SizedBox(
+                    height: 180,
+                    child: Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                  );
+                }
+                return HomeCarousalWidget(
+                  homeSliderModel: homeController.homeSliderModel,
+                );
+              }
+              ),
               const SizedBox(
-                height: 16,
+                height: 8,
               ),
               RemarksTitleWidget(
                 remarksName: 'Categories',
