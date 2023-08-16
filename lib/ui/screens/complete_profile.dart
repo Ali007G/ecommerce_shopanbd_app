@@ -58,16 +58,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                   controller: TextEditingController(),
                   validator: (String? value) {},
                   textInputType: TextInputType.name,
-                  hintText: 'First Name',
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                CommonTextField(
-                  controller: TextEditingController(),
-                  validator: (String? value) {},
-                  textInputType: TextInputType.name,
-                  hintText: 'First Name',
+                  hintText: 'Middle Name',
                 ),
                 const SizedBox(
                   height: 16,
