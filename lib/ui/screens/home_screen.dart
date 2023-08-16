@@ -9,6 +9,7 @@ import 'package:ecommerce_shopanbd/ui/screens/email_verification_screen.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/auth_controller.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/bottom_navigation_bar_controller.dart';
 import 'package:ecommerce_shopanbd/ui/state_management/home_controller.dart';
+import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,11 +37,16 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+
         elevation: 0,
         backgroundColor: Colors.white,
         title: Row(
           children: [
-            Image.asset('assets/images/logo_nav.png'),
+            Image.asset('assets/images/shopan.png',scale: 10,),
+            SizedBox(width: 150,),
+            Text('ShopanBD',style: TextStyle(
+              color: primaryColor
+            ),),
             const Spacer(),
             AppBarIconButton(
               icondata: Icons.person,
