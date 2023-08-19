@@ -63,17 +63,17 @@ class _CartScreenState extends State<CartScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(productName[index].toString(),
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      SizedBox(height: 8,),
+                                      const SizedBox(height: 8,),
                                       Text("${productUnit[index]}  \$${productPrice[index]}",
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                      SizedBox(height: 8,),
+                                      const SizedBox(height: 8,),
                                       Align(
                                         alignment: Alignment.centerRight,
                                         child: InkWell(
@@ -113,5 +113,6 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 }
+
 
 
