@@ -31,6 +31,7 @@ class _CartScreenState extends State<CartScreen> {
         appBar: AppBar(
           title: const Text('Cart', style: TextStyle(
             color: primaryColor,
+            fontWeight: FontWeight.w500,
           ),),
         ),
         body: Column(
@@ -56,20 +57,21 @@ class _CartScreenState extends State<CartScreen> {
                                   width: 100,
                                   image: NetworkImage(productImage[index].toString(),),
                                 ),
-                                SizedBox(width: 16,),
+                                const SizedBox(width: 16,),
                                 Expanded(
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
+                                      const SizedBox(width: 16,),
                                       Text(productName[index].toString(),
                                         style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      const SizedBox(height: 8,),
+                                      const SizedBox(height: 16,),
                                       Text("${productUnit[index]}  \$${productPrice[index]}",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
@@ -84,7 +86,7 @@ class _CartScreenState extends State<CartScreen> {
                                               borderRadius: BorderRadius.circular(8),
                                               color: Colors.green,
                                             ),
-                                            child: Center(
+                                            child: const Center(
                                               child: Text('Add to cart', style: TextStyle(
                                                 color: Colors.white,
                                               ),),
