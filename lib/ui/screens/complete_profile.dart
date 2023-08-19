@@ -45,59 +45,77 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                 const SizedBox(
                   height: 16,
                 ),
-                CommonTextField(
-                  controller: TextEditingController(),
-                  validator: (String? value) {},
-                  textInputType: TextInputType.name,
-                  hintText: 'First Name',
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CommonTextField(
+                    controller: TextEditingController(),
+                    validator: (String? value) {},
+                    textInputType: TextInputType.name,
+                    hintText: 'First Name',
+                  ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 8,
                 ),
-                CommonTextField(
-                  controller: TextEditingController(),
-                  validator: (String? value) {},
-                  textInputType: TextInputType.name,
-                  hintText: 'Middle Name',
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                CommonTextField(
-                  controller: TextEditingController(),
-                  validator: (String? value) {},
-                  textInputType: TextInputType.name,
-                  hintText: 'Last Name',
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CommonTextField(
+                    controller: TextEditingController(),
+                    validator: (String? value) {},
+                    textInputType: TextInputType.name,
+                    hintText: 'Middle Name',
+                  ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 8,
                 ),
-                CommonTextField(
-                  controller: TextEditingController(),
-                  validator: (String? value) {},
-                  textInputType: TextInputType.number,
-                  hintText: 'Mobile',
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                CommonTextField(
-                  controller: TextEditingController(),
-                  validator: (String? value) {},
-                  textInputType: TextInputType.name,
-                  hintText: 'City',
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CommonTextField(
+                    controller: TextEditingController(),
+                    validator: (String? value) {},
+                    textInputType: TextInputType.name,
+                    hintText: 'Last Name',
+                  ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 8,
                 ),
-                CommonTextField(
-                  controller: TextEditingController(),
-                  validator: (String? value) {},
-                  textInputType: TextInputType.name,
-                  hintText: 'Shipping Address',
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CommonTextField(
+                    controller: TextEditingController(),
+                    validator: (String? value) {},
+                    textInputType: TextInputType.number,
+                    hintText: 'Mobile',
+                  ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 8,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CommonTextField(
+                    controller: TextEditingController(),
+                    validator: (String? value) {},
+                    textInputType: TextInputType.name,
+                    hintText: 'City',
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CommonTextField(
+                    controller: TextEditingController(),
+                    validator: (String? value) {},
+                    textInputType: TextInputType.name,
+                    hintText: 'Shipping Address',
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
                 ),
                 SizedBox(
                   width: double.infinity,

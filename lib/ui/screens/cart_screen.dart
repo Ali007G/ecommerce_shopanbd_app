@@ -75,7 +75,7 @@ class _CartScreenState extends State<CartScreen> {
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                      //const SizedBox(height: 8,),
+                                      const SizedBox(height: 8,),
                                       Align(
                                         alignment: Alignment.centerRight,
                                         child: InkWell(
