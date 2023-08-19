@@ -10,16 +10,16 @@ class CartScreen extends StatefulWidget {
 
 class _CartScreenState extends State<CartScreen> {
 
-  List<String> productName = ['Mango', 'Banana', 'Orange', 'Grapes', 'Chery',];
-  List<String> productUnit = ['KG', 'Dozen', 'KG', 'KG', 'KG',];
-  List<int> productPrice = [10, 20, 30, 40, 50];
+  List<String> productName = ['Mango', 'Banana', 'Orange', 'Grapes', 'Chery', 'Mango'];
+  List<String> productUnit = ['KG', 'Dozen', 'KG', 'KG', 'KG', 'KG'];
+  List<int> productPrice = [10, 20, 30, 40, 50, 60];
   List<String> productImage = [
     'https://media.istockphoto.com/id/467328250/photo/mango.jpg?s=170667a&w=0&k=20&c=tv-8cS8XdXA6NDj6BhWqOhDZ79_oZwtkL8bzyO7bma4=',
     'https://image.shutterstock.com/image-photo/bunch-bananas-isolated-on-white-260nw-1722111529.jpg',
     'https://media.istockphoto.com/id/467328250/photo/mango.jpg?s=170667a&w=0&k=20&c=tv-8cS8XdXA6NDj6BhWqOhDZ79_oZwtkL8bzyO7bma4=',
     'https://media.istockphoto.com/id/467328250/photo/mango.jpg?s=170667a&w=0&k=20&c=tv-8cS8XdXA6NDj6BhWqOhDZ79_oZwtkL8bzyO7bma4=',
     'https://media.istockphoto.com/id/467328250/photo/mango.jpg?s=170667a&w=0&k=20&c=tv-8cS8XdXA6NDj6BhWqOhDZ79_oZwtkL8bzyO7bma4=',
-
+    'https://media.istockphoto.com/id/467328250/photo/mango.jpg?s=170667a&w=0&k=20&c=tv-8cS8XdXA6NDj6BhWqOhDZ79_oZwtkL8bzyO7bma4=',
   ];
 
 
@@ -75,7 +75,7 @@ class _CartScreenState extends State<CartScreen> {
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
-                                      const SizedBox(height: 8,),
+                                      //const SizedBox(height: 8,),
                                       Align(
                                         alignment: Alignment.centerRight,
                                         child: InkWell(
