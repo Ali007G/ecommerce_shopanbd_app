@@ -1,6 +1,7 @@
 import '../utills/app_colours.dart';
 import 'package:flutter/material.dart';
 
+// stateful widget   
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
 
