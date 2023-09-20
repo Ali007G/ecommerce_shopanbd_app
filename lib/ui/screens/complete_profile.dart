@@ -3,6 +3,7 @@ import 'package:ecommerce_shopanbd/ui/widgets/common_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// stateful
 class CompleteProfileScreen extends StatefulWidget {
   const CompleteProfileScreen({Key? key}) : super(key: key);
 
