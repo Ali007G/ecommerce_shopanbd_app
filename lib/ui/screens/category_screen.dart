@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 import '../state_management/bottom_navigation_bar_controller.dart';
 
-stateless widget- dynamic
+// stateless widget- dynamic
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({Key? key}) : super(key: key);
 
