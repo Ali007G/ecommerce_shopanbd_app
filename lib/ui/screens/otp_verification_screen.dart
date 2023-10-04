@@ -8,6 +8,7 @@ import '../utills/app_colours.dart';
 import '../utills/styles.dart';
 //import '../widgets/common_elevated_button.dart';
 
+//stateful widget
 class OTPVerificationScreen extends StatefulWidget {
   final String email;
 
