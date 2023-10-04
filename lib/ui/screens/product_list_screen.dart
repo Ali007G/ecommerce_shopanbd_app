@@ -2,6 +2,7 @@ import 'package:ecommerce_shopanbd/ui/utills/app_colours.dart';
 import 'package:ecommerce_shopanbd/ui/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
+// stateless widget
 class ProductListScreen extends StatelessWidget {
   const ProductListScreen({Key? key}) : super(key: key);
 
