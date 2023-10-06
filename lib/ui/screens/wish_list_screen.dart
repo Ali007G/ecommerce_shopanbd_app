@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 import '../widgets/product_card.dart';
 
+// stateless widget
 class WishListScreen extends StatelessWidget {
   const WishListScreen({Key? key}) : super(key: key);
 
