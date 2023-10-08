@@ -12,3 +12,6 @@ TextStyle subTitleStyle = TextStyle(
     color: greyColor,
     letterSpacing: 0.5,
 );
+
+
+// this is all customize styles
