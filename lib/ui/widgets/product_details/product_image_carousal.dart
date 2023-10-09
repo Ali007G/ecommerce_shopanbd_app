@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../utills/app_colours.dart';
 
-class ProductImageCarousal extends StatelessWidget {
+class ProductImageCarousal extends StatelessWidget {    // stateless widget
   final ValueNotifier<int> _currentCarouselIndex = ValueNotifier(0);
 
   ProductImageCarousal({Key? key}) : super(key: key);
